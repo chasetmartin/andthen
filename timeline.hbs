@@ -1,0 +1,30 @@
+{{!< default}}
+<main>
+    <div class="timeline-blur">
+    <div class="post-feed gh-feed gh-canvas">
+        {{#get "posts" limit="100" as |postList|}}
+            <div class="timeline fade-in">
+                    {{#foreach postList}}
+                        <div class="timeline-item">
+                         {{!-- <div class="timeline-item" data-year="{{date published_at format="YYYY"}}"> --}}
+                            {{!-- <div class="year-header">{{date published_at format="YYYY"}}</div> --}}
+                            <a href="{{url}}" style="text-decoration: none; color: inherit;">
+                                <div class="timeline-icon"></div>
+                                <div class="timeline-content">
+                                    <h2>{{title}}</h2>
+                                    <p>{{content}}</p>
+                                    <p class="date">{{date published_at format="DD MMM YYYY"}}</p>
+                                </div>
+                                {{#if feature_image}}
+                                    <div class="timeline-image" style="background-image: url('{{feature_image}}');"></div>
+                                {{/if}}
+                            </a>
+                        </div>
+                    {{/foreach}}
+                </div>
+        {{/get}}
+    </div>
+    </div>
+</main>
+
+                

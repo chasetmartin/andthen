@@ -1,0 +1,143 @@
+@import "@tryghost/shared-theme-assets/assets/css/v1/screen.css";
+@import "general/fonts.css";
+@import "general/basics.css";
+@import "general/button.css";
+@import "general/form.css";
+@import "general/icons.css";
+@import "site/layout.css";
+@import "site/header.css";
+@import "site/cover.css";
+@import "blog/feed.css";
+@import "blog/featured.css";
+@import "blog/pagination.css";
+@import "blog/single.css";
+@import "blog/author.css";
+@import "blog/share.css";
+@import "blog/navigation.css";
+@import "blog/related.css";
+@import "blog/taxonomy.css";
+@import "misc/tiny-slider.css";
+@import "misc/utils.css";
+@import "misc/portal.css";
+@import "misc/animations.css";
+
+/* Timeline Feature */
+.timeline {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: green;
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    margin-left: -3px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: darkgrey;
+    border-radius: 10px;
+    margin: 25px 0;
+    width: 75%;
+    right: 26%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -4%;
+    background-color: white;
+    border: 4px solid green;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item .timeline-content {
+    padding: 20px 30px;
+    background-color: whitesmoke;
+    position: relative;
+    border-radius: 6px;
+}
+
+.timeline-item .timeline-content .date {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -4.5%;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    /* float: right; */
+}
+
+.timeline-image {
+    width: 175px;
+    height: 125px;
+    border-radius: 10%;
+    background-size: cover; 
+    background-position: center;
+    position: absolute;
+    top: 10%;
+    right: -60%;
+}
+
+.timeline-item:nth-child(even) .timeline-image {
+    right: auto;
+    left: -60%;
+}
+
+.timeline-blur::after {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% / 6);  /* 1/7 of the page height */
+    backdrop-filter: blur(10px);
+    pointer-events: none;  /* Allow clicks to pass through */
+    -webkit-mask-image: linear-gradient(to top, black 0%, transparent 100%);
+    mask-image: linear-gradient(to top, black 0%, transparent 100%);
+}
+
+/* .year-header {
+    display: none;
+}
+
+.timeline-item[data-year="2024"] .year-header:first-of-type,
+.timeline-item[data-year="2023"] .year-header:first-of-type,
+.timeline-item[data-year="2022"] .year-header:first-of-type,
+.timeline-item[data-year="2021"] .year-header:first-of-type,
+.timeline-item[data-year="2020"] .year-header:first-of-type,
+.timeline-item[data-year="2019"] .year-header:first-of-type,
+.timeline-item[data-year="2018"] .year-header:first-of-type,
+.timeline-item[data-year="2017"] .year-header:first-of-type {
+    display: block;
+    position: relative;
+    top: -50px;
+    color: green;
+} */
+
+@keyframes fadeInZoomOut {
+    from { opacity: 0; transform: scale(1.1); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.fade-in {
+    animation: fadeInZoomOut 2s ease-in-out;
+}
