@@ -48,6 +48,9 @@ body:not(.with-full-cover) .cover {
     max-width: 720px;
     margin: auto;
     text-align: center;
+    background-color: rgb(7, 27, 35, 0.4);
+    padding: 4rem 2rem;
+    border-radius: 10px;
 }
 
 .cover-description {
@@ -96,7 +99,7 @@ body:not(.with-full-cover) .cover {
 
 .cover-arrow {
     position: absolute;
-    bottom: 40px;
+    bottom: 60px;
     left: 50%;
     z-index: 10;
     display: none;
@@ -110,9 +113,10 @@ body:not(.with-full-cover) .cover {
 }
 
 .cover-arrow .icon {
-    width: 28px;
-    height: 28px;
+    width: 100px;
+    height: 100px;
     color: #fff;
+    animation: pulse 2s ease-in-out infinite;
 }
 
 @media (max-width: 767px) {
@@ -124,5 +128,17 @@ body:not(.with-full-cover) .cover {
 @media (max-width: 991px) {
     .menu-opened .cover {
         margin-top: 0;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    100% {
+        transform: scale(1);
     }
 }

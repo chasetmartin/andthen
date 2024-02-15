@@ -60,3 +60,31 @@
     font-weight: 700;
     src: local(""), url("../fonts/lora-v23-latin-700italic.woff2") format("woff2"), url("../fonts/lora-v23-latin-700italic.woff") format("woff");
 }
+
+@font-face {
+    font-family: PlayfairDisplay;
+    src: local(""), url("../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: PlayfairDisplay;
+    src: local(""), url("../fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Merriweather;
+    src: local(""), url("../fonts/Merriweather-Light.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Merriweather;
+    src: local(""), url("../fonts/Merriweather-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
